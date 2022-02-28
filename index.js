@@ -25,6 +25,10 @@ try {
     app.get('/', (req, res) => {
         res.render('index');
     });
+    app.post('/contact', (req, res) => {
+        // In prod will send email to tasty-buds customer service
+        res.render('contact');
+    });
 
     // Unhandled routes
     app.get('*', async (req, res) => {
